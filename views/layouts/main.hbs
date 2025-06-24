@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="/" class="{{#if (eq title 'Home')}}active{{/if}}">Home</a>
+      <a href="/blog" class="{{#if (eq title 'Blog')}}active{{/if}}">Blog</a>
+      <a href="/about" class="{{#if (eq title 'About')}}active{{/if}}">About</a>
+      <a href="/projects" class="{{#if (eq title 'Projects')}}active{{/if}}">Projects</a>
+      <a href="/now" class="{{#if (eq title 'Now')}}active{{/if}}">Now</a>
+      {{!-- Add more links here like Projects, About later --}}
+    </nav>
+  </header>
+
+  <main class="container">
+    {{{body}}}
+  </main>
+</body>
+</html>

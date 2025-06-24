@@ -1,0 +1,29 @@
+<!-- blog.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Alexander DeMarco</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="container">
+      <p class="tagline">Combat. Code. Clarity</p>
+      <h1>Blog</h1>
+
+      {{#each posts}}
+        <article class="post-entry">
+          <h2 class="post-title">
+            <a href="/post/{{slug}}">{{title}}</a>
+          </h2>
+          <small class="post-date">{{date}}</small>
+          <p class="post-excerpt">{{excerpt}}</p>
+        </article>
+      {{/each}}
+
+      <a href="/" class="back-link">&larr; Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
