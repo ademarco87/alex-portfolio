@@ -42,6 +42,7 @@ app.get('/post/:slug', (req, res) => {
   res.render('post', {
     title: data.title,
     date: data.date,
+    author: data.author,
     content: marked(content)
   });
 });

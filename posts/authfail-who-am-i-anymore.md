@@ -1,5 +1,6 @@
 ---
 title: "Authentication Failed: Who Even Am I Anymore?"
+author: "Alexander DeMarco"
 date: "2025-04-20"
 excerpt: "When the uniform came off, I couldn’t log into myself. Coding gave me back the credentials."
 ---

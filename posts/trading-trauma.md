@@ -1,5 +1,6 @@
 ---
 title: "🚨 Trading Trauma for Stack Traces"
+author: "Alexander DeMarco"
 date: "2025-03-01"
 excerpt: "From Boy, to Soldier, to Paramedic, to Developer"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Unpacking the Darkness"
+author: "Alexander DeMarco"
 date: "2025-04-02"
 excerpt: "Leaving EMS isn’t a switch you flip. Healing takes time—and sometimes starts while you’re still inside the chaos."
 ---

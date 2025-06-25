@@ -1,4 +1,4 @@
-/* ========== RESET & BASE TYPOGRAPHY ========== */
+/* ========== RESET & BASE ========== */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,6 @@ body {
 
 /* ========== CONTAINERS ========== */
 .outer-box {
-  position: relative;
   background-color: transparent;
   padding: 2rem;
   border-radius: 12px;
@@ -33,20 +32,18 @@ body {
   box-shadow:
     0 0 15px rgba(255, 0, 0, 0.4),
     0 0 30px rgba(255, 0, 0, 0.05) inset;
-  position: relative;
-  z-index: 1;
   max-width: 850px;
   margin: 0 auto;
 }
 
-/* ========== HEADINGS & TYPOGRAPHY ========== */
+/* ========== TYPOGRAPHY ========== */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #e63946;
-  border-bottom: 2px solid #e63946;
+  color: #ff4d4d;
+  border-bottom: 2px solid #ff4d4d;
   padding-bottom: 0.5rem;
-  text-shadow: 0 0 10px rgba(230, 57, 70, 0.8);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
   animation: flicker 1.5s infinite;
 }
 
@@ -59,25 +56,18 @@ h1 {
   font-weight: 600;
 }
 
-.post-title {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+.post-meta {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 1.2rem;
   text-shadow: 0 0 6px rgba(255, 0, 0, 0.5);
 }
 
 .post-excerpt {
   margin-top: 0.5rem;
   color: #ccc;
-}
-
-small,
-.post-date {
-  color: #888;
-  font-style: italic;
-  font-size: 0.8rem;
-  display: inline-block;
-  margin: -0.25rem 0 0.5rem;
 }
 
 .post-body {
@@ -87,7 +77,7 @@ small,
   line-height: 1.7;
 }
 
-/* ========== NAVIGATION BAR ========== */
+/* ========== NAVIGATION ========== */
 .navbar {
   display: flex;
   justify-content: center;
@@ -122,7 +112,7 @@ small,
   background-color: #ff4d4d;
 }
 
-/* ========== BLOG ARTICLE STYLING ========== */
+/* ========== BLOG LIST ========== */
 article {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
@@ -154,7 +144,6 @@ a {
   font-weight: bold;
   text-decoration: none;
   position: relative;
-  cursor: pointer;
 }
 
 a::after {
@@ -190,36 +179,14 @@ a:hover::after {
   text-shadow: 0 0 6px #ff4081;
 }
 
-/* ========== ANIMATIONS ========== */
-@keyframes flicker {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.9; }
-  100% { opacity: 1; }
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-  }
-
-  .container {
-    padding: 1.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .post-title {
-    font-size: 1.1rem;
-  }
-}
-
-/* Markdown Styling */
-.post-body h2, .post-body h3 {
+/* ========== MARKDOWN CONTENT ========== */
+.post-body h2,
+.post-body h3 {
   color: #ff4d4d;
   margin-top: 1.5rem;
+  border-bottom: 1px solid #ff4d4d;
+  padding-bottom: 0.3rem;
+  text-shadow: 0 0 6px rgba(255, 77, 77, 0.5);
 }
 
 .post-body p {
@@ -250,6 +217,13 @@ a:hover::after {
   font-style: italic;
 }
 
+.post-body hr {
+  margin: 2.5rem 0;
+  border: none;
+  border-top: 1px solid #ff4d4d;
+}
+
+/* ========== LAYOUT CLEANUP ========== */
 .container p {
   margin-bottom: 1.2rem;
   font-size: 1.05rem;
@@ -263,11 +237,28 @@ a:hover::after {
   margin-bottom: 0.6rem;
 }
 
-.container h2 {
-  font-size: 1.6rem;
-  color: #ff4d4d;
-  margin: 2rem 0 1rem;
-  text-shadow: 0 0 6px rgba(255, 77, 77, 0.5);
-  border-bottom: 1px solid #ff4d4d;
-  padding-bottom: 0.3rem;
+/* ========== ANIMATION ========== */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+  }
 }

@@ -26,7 +26,8 @@ router.get('/blog', (req, res) => {
         title: data.title || 'Untitled',
         slug: filename.replace('.md', ''),
         date: data.date || '',
-        excerpt: data.excerpt || ''
+        excerpt: data.excerpt || '',
+        author: data.author || 'Unknown Author'
       };
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -50,6 +51,7 @@ router.get('/post/:slug', (req, res) => {
   res.render('post', {
     title: data.title,
     date: data.date,
+    author: data.author,
     content: htmlContent
   });
 });

@@ -1,5 +1,6 @@
 ---
 title: "STR53-CPP: A Pointer to Bad Memory"
+author: "Alexander DeMarco"
 date: "2025-06-24"
 excerpt: "This isn’t just a C++ rule. It’s how I survived for years — by pointing to bad memory and pretending it was fine."
 ---

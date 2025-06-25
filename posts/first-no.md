@@ -1,5 +1,6 @@
 ---
 title: "The First Time I Said No"
+author: "Alexander DeMarco"
 date: "2025-05-30"
 excerpt: "It started with a leadership conference and a silent shift swap request. What I learned was that loyalty shouldn’t cost your identity."
 ---
