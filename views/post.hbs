@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{title}} | {{author}}</title>
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
-<body>
-  <div class="container">
-    <p class="post-author">By {{author}}</p>
-    <p class="post-date">{{date}}</p>
-
-    <div class="post-body">
-      {{{content}}}
+<article class="page-section post-page">
+  <div class="post-header">
+    <div class="post-meta-row">
+      <span class="post-meta-date">{{date}}</span>
+      <span class="post-meta-author">{{author}}</span>
     </div>
-
-    <a href="/blog" class="back-link">&larr; Back to Blog</a>
+    <h1 class="post-title-large">{{title}}</h1>
   </div>
-</body>
-</html>
+
+  <div class="post-body">
+    {{{content}}}
+  </div>
+
+  <div class="post-footer">
+    <a href="/blog" class="back-link">← Back to Blog</a>
+  </div>
+</article>

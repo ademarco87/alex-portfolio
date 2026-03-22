@@ -7,7 +7,7 @@ const { marked } = require('marked');
 
 // Home page
 router.get('/', (req, res) => {
-  res.render('home', { title: 'Home' });
+  res.render('home', { title: 'devbyalex', activePage: 'home' });
 });
 
 // Blog list (reads all markdown files)
@@ -32,7 +32,7 @@ router.get('/blog', (req, res) => {
     })
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  res.render('blog', { posts, title: 'Blog' });
+  res.render('blog', { posts, title: 'Blog | devbyalex', activePage: 'blog' });
 });
 
 // Individual post page
@@ -49,26 +49,27 @@ router.get('/post/:slug', (req, res) => {
   const htmlContent = marked(content);
 
   res.render('post', {
-    title: data.title,
+    title: `${data.title} | devbyalex`,
     date: data.date,
     author: data.author,
-    content: htmlContent
+    content: htmlContent,
+    activePage: 'blog'
   });
 });
 
 // About page
 router.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+  res.render('about', { title: 'About | devbyalex', activePage: 'about' });
 });
 
 // Projects page
 router.get('/projects', (req, res) => {
-  res.render('projects', { title: 'Projects' });
+  res.render('projects', { title: 'Projects | devbyalex', activePage: 'projects' });
 });
 
 // Now page
 router.get('/now', (req, res) => {
-  res.render('now', { title: 'Now' });
+  res.render('now', { title: 'Now | devbyalex', activePage: 'now' });
 });
 
 module.exports = router;

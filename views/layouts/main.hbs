@@ -2,23 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{title}}</title>
+  <meta name="description" content="devbyalex — Combat. Code. Clarity. Personal blog by Alexander DeMarco." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <a href="/" class="{{#if (eq title 'Home')}}active{{/if}}">Home</a>
-      <a href="/blog" class="{{#if (eq title 'Blog')}}active{{/if}}">Blog</a>
-      <a href="/about" class="{{#if (eq title 'About')}}active{{/if}}">About</a>
-      <a href="/projects" class="{{#if (eq title 'Projects')}}active{{/if}}">Projects</a>
-      <a href="/now" class="{{#if (eq title 'Now')}}active{{/if}}">Now</a>
-      {{!-- Add more links here like Projects, About later --}}
-    </nav>
-  </header>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
 
-  <main class="container">
+  <nav>
+    <a href="/" class="nav-logo">dev<span>by</span>alex</a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/" class="{{#if (eq activePage 'home')}}active{{/if}}">Home</a></li>
+      <li><a href="/blog" class="{{#if (eq activePage 'blog')}}active{{/if}}">Blog</a></li>
+      <li><a href="/about" class="{{#if (eq activePage 'about')}}active{{/if}}">About</a></li>
+      <li><a href="/projects" class="{{#if (eq activePage 'projects')}}active{{/if}}">Projects</a></li>
+      <li><a href="/now" class="{{#if (eq activePage 'now')}}active{{/if}}">Now</a></li>
+    </ul>
+
+    <a href="https://ademarco87.github.io/" target="_blank" rel="noopener" class="nav-cta">Portfolio ↗</a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main>
     {{{body}}}
   </main>
+
+  <footer>
+    <span class="footer-copy">© 2025 Alexander DeMarco</span>
+    <span class="footer-tag">Combat. Code. <span>Clarity.</span></span>
+  </footer>
+
+  <script>
+    // Cursor glow
+    const glow = document.getElementById('cursorGlow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    // Scroll progress
+    const bar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      bar.style.width = scrolled + '%';
+    });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>

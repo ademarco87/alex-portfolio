@@ -1,5 +1,5 @@
 ---
-title: "🚨 Trading Trauma for Stack Traces"
+title: "Trading Trauma for Stack Traces"
 author: "Alexander DeMarco"
 date: "2025-03-01"
 excerpt: "From Boy, to Soldier, to Paramedic, to Developer"
@@ -126,7 +126,7 @@ This wasn’t reinvention. It was **reclamation**.
 
 EMS gave me purpose, but it also gave me excuses. I didn’t realize how deep I’d sunk until I decided to stop.
 
-That whole unraveling? I wrote about it in more detail [here](/post/unpacking-darkness).
+That whole unraveling? I wrote about it in more detail [here](/post/unpackdarkness).
 
 ## ⚒️ Built for Chaos, Wired to Build
 
