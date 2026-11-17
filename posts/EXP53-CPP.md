@@ -1,5 +1,5 @@
 ---
-title: "STR53-CPP: A Pointer to Bad Memory"
+title: "EXP53-CPP: A Pointer to Bad Memory"
 author: "Alexander DeMarco"
 date: "2025-06-24"
 excerpt: "This isn’t just a C++ rule. It’s how I survived for years — by pointing to bad memory and pretending it was fine."
@@ -11,14 +11,14 @@ Welcome to my personal patch notes. This series is part developer journal, part 
 
 ---
 
-> “STR53-CPP: A pointer to bad memory.”  
+> “EXP53-CPP: A pointer to bad memory.”  
 > — Me, having an existential crisis and a compiler warning at the same time
 
 *Yes. That’s a pun. And no, I’m not sorry.*
 
 ---
 
-## 🔍 What STR53-CPP Actually Means
+## 🔍 What EXP53-CPP Actually Means
 
 > *Do not read uninitialized memory.*
 
@@ -56,7 +56,7 @@ Yeah, same applies to people.
 
 ## 🧠 Why This Rule Hit Me So Damn Hard
 
-I was working on a secure coding assignment. STR53-CPP popped up and all I could think was:
+I was working on a secure coding assignment. EXP53-CPP popped up and all I could think was:
 
 > “Oh shit, this is me.”
 
@@ -84,7 +84,7 @@ I see **proof I figured it out once — and I will again.**
 
 ## 🧳 One More Thing
 
-STR53-CPP isn't just a warning in your IDE.  
+EXP53-CPP isn't just a warning in your IDE.  
 It’s a reminder that you can’t function forever while pointing to garbage.
 
 - Clean up your memory.  

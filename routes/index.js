@@ -35,6 +35,11 @@ router.get('/blog', (req, res) => {
   res.render('blog', { posts, title: 'Blog | devbyalex', activePage: 'blog' });
 });
 
+// Redirect old slug (post was originally mislabeled as STR53-CPP)
+router.get('/post/STR53-CPP', (req, res) => {
+  res.redirect(301, '/post/EXP53-CPP');
+});
+
 // Individual post page
 router.get('/post/:slug', (req, res) => {
   const slug = req.params.slug;
